@@ -1,0 +1,1120 @@
+{
+ "metadata": {
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.5"
+  },
+  "orig_nbformat": 4,
+  "kernelspec": {
+   "name": "python3",
+   "display_name": "Python 3.9.5 64-bit"
+  },
+  "interpreter": {
+   "hash": "216337ff380c622baa3e7d0feb8be3d8bf2768a1b54c72d4bc8e29def94b194d"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2,
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "numeric data types in python\n",
+    "\n",
+    "x = 1 # int\n",
+    "y = 2.8 # float\n",
+    "z = 3+3j # complex\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "<class 'int'>\n<class 'int'>\n<class 'int'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "# int\n",
+    "\n",
+    "# - whole number\n",
+    "# - positive or negative\n",
+    "# - without decimals\n",
+    "# - unlimited length\n",
+    "\n",
+    "x = 1\n",
+    "y = 35555222225555555442255\n",
+    "z = -252252255\n",
+    "\n",
+    "print(type(x))\n",
+    "print(type(y))\n",
+    "print(type(z))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "<class 'float'>\n<class 'float'>\n<class 'float'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "# floats\n",
+    "\n",
+    "# - positive or negative\n",
+    "# - contaning one or more decimals\n",
+    "\n",
+    "x = 1.10\n",
+    "y = 1.0\n",
+    "z = -35.59\n",
+    "\n",
+    "print(type(x))\n",
+    "print(type(y))\n",
+    "print(type(z))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "<class 'complex'>\n<class 'complex'>\n<class 'complex'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "# complex \n",
+    "\n",
+    "x = 3+5j\n",
+    "y = 5j\n",
+    "z = -5j\n",
+    "print(type(x))\n",
+    "print(type(y))\n",
+    "print(type(z))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "1\n2\n64\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = int(1)\n",
+    "y = int(2.8)\n",
+    "z = int(\"64\")\n",
+    "\n",
+    "print(x)\n",
+    "print(y)\n",
+    "print(z)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "1.0\n2.8\n3.4\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = float(1)\n",
+    "y = float(2.8)\n",
+    "z = float(\"3.4\")\n",
+    "\n",
+    "print(x)\n",
+    "print(y)\n",
+    "print(z)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "s1\n<class 'str'>\n3.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = str(\"s1\")\n",
+    "y = str(2)\n",
+    "z = str(3.0)\n",
+    "\n",
+    "print(x)\n",
+    "print(type(y))\n",
+    "print(z)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "hello\nhello\nhello\nhello\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = \"hello\"\n",
+    "y = 'hello'\n",
+    "\n",
+    "print(x)\n",
+    "print(y)\n",
+    "print(\"hello\")\n",
+    "print('hello')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "5\n5\n5\n5\n5\n5\n"
+     ]
+    }
+   ],
+   "source": [
+    "for x in \"banana\":\n",
+    "    print(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "13\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = \"hello, world!\"\n",
+    "print(len(a))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "yes\n"
+     ]
+    }
+   ],
+   "source": [
+    "txt = \"ict is got awesome\"\n",
+    "print(\"got\" in txt)\n",
+    "\n",
+    "if \"ict\" in txt:\n",
+    "    print(\"yes\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "no\n"
+     ]
+    }
+   ],
+   "source": [
+    "txt = \"ict is awesome\"\n",
+    "print(\"not\" not in txt)\n",
+    "\n",
+    "if \"ict\" not in txt:\n",
+    "    print(\"no\")\n",
+    "else:\n",
+    "    print(\"yes\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Python Lists\n",
+    "# Lists are used to store multiple values in a single variable.\n",
+    "# List items are indexed.\n",
+    "# changeable\n",
+    "# Allow Duplicates\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "['apple', 'banana', 'cherry']\n['apple', 'banana', 'cherry']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# create a list\n",
+    "\n",
+    "sampleList = [\"apple\",\"banana\",\"cherry\"]\n",
+    "\n",
+    "# print a list\n",
+    "\n",
+    "print(sampleList)\n",
+    "\n",
+    "# Allow duplicates \n",
+    "sampleList = [\"apple\",\"banana\",\"apple\",\"cherry\"]\n",
+    "\n",
+    "# List length\n",
+    "\n",
+    "print(len(sampleList))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "['banana', 'cherry', 'orange']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Accessing list items\n",
+    "\n",
+    "# refers to the first item\n",
+    "print(sampleList[0])\n",
+    "\n",
+    "# refers to the last item\n",
+    "print(sampleList[-1])\n",
+    "\n",
+    "# refers to the second last item\n",
+    "print(sampleList[-2])\n",
+    "\n",
+    "# range of indexes\n",
+    "\n",
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"orange\",\"kiwi\",\"melon\"]\n",
+    "print(sampleListString[1:-2])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"orange\",\"kiwi\",\"melon\"]\n",
+    "print(sampleListString[2:5])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "['apple', 'banana', 'cherry', 'blackcurrant', 'kiwi', 'melon']\n"
+     ]
+    }
+   ],
+   "source": [
+    "#To change the value of specific item,refer to the index number.\n",
+    "\n",
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"orange\",\"kiwi\",\"melon\"]\n",
+    "sampleListString[3] = \"blackcurrant\"\n",
+    "print(sampleListString)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "['apple', 'banana', 'cherry', 'kiwi', 'melon', 100]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Add list items\n",
+    "\n",
+    "# using append method\n",
+    "\n",
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"kiwi\",\"melon\"]\n",
+    "sampleListString.append(100)\n",
+    "print(sampleListString)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "['apple', 'banana', 'cherry', 'orange', 'kiwi', 'melon']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# using insert method\n",
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"kiwi\",\"melon\"]\n",
+    "sampleListString.insert(3,\"orange\")\n",
+    "print(sampleListString)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "['apple', 'banana', 'cherry', 'melon']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Remove list items\n",
+    "\n",
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"kiwi\",\"melon\"]\n",
+    "sampleListString.remove(\"kiwi\")\n",
+    "print(sampleListString)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "['apple', 'banana', 'kiwi', 'melon']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# remove specified index\n",
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"kiwi\",\"melon\"]\n",
+    "sampleListString.pop(2)\n",
+    "print(sampleListString)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "['apple', 'cherry', 'kiwi', 'melon']\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"kiwi\",\"melon\"]\n",
+    "sampleListString.pop(1)\n",
+    "print(sampleListString)\n",
+    "\n",
+    "# If you not specify the index, the pop() method removes the last item."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "[]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Clear the list\n",
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"kiwi\",\"melon\"]\n",
+    "sampleListString.clear()\n",
+    "print(sampleListString)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "apple\nbanana\ncherry\nkiwi\nmelon\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Loop lists\n",
+    "# Loop through a list\n",
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"kiwi\",\"melon\"]\n",
+    "for x in sampleListString:\n",
+    "    print(x)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "apple\nbanana\ncherry\nkiwi\nmelon\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"kiwi\",\"melon\"]\n",
+    "for i in range(len(sampleListString)):\n",
+    "    print(sampleListString[i])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "apple\nbanana\ncherry\nkiwi\nmelon\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"kiwi\",\"melon\"]\n",
+    "i = 0\n",
+    "while i < len(sampleListString):\n",
+    "    print(sampleListString[i])\n",
+    "    i = i + 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 86,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "[10, 20, 25, 500, 1000]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#ascending order\n",
+    "sampleListString = [500,1000,25,20,10]\n",
+    "sampleListString.sort()\n",
+    "print(sampleListString)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 84,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "[1000, 500, 25, 20, 10]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#descending order\n",
+    "sampleListString = [500,1000,25,20,10]\n",
+    "sampleListString.sort(reverse=True)\n",
+    "print(sampleListString)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 83,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "['apple', 'banana', 'cherry', 'kiwi', 'mango', 'melon']\n"
+     ]
+    }
+   ],
+   "source": [
+    "#alphabetical order\n",
+    "sampleListString = [\"apple\",\"banana\",\"cherry\",\"kiwi\",\"melon\",\"mango\"]\n",
+    "sampleListString.sort()\n",
+    "print(sampleListString)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Method\tDescription\n",
+    "append()\tAdds an element at the end of the list\n",
+    "clear()\tRemoves all the elements from the list\n",
+    "copy()\tReturns a copy of the list\n",
+    "count()\tReturns the number of elements with the specified value\n",
+    "extend()\tAdd the elements of a list (or any iterable), to the end of the current list\n",
+    "index()\tReturns the index of the first element with the specified value\n",
+    "insert()\tAdds an element at the specified position\n",
+    "pop()\tRemoves the element at the specified position\n",
+    "remove()\tRemoves the item with the specified value\n",
+    "reverse()\tReverses the order of the list\n",
+    "sort()\tSorts the list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "('banana', 'cherry', 'orange')\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Tuples\n",
+    "# Used to store multiple items in a single variable\n",
+    "# ordered\n",
+    "# Unchangeable\n",
+    "# Allow duplicate values\n",
+    "# Creating a tuple\n",
+    "\n",
+    "sampleTuple = (\"apple\",\"banana\",\"cherry\",\"orange\",\"berry\")\n",
+    "print(sampleTuple[1:4])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "('apple', 'banana', 'cherry', 'orange')\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = (\"apple\",\"banana\",\"cherry\")\n",
+    "y = list(x)\n",
+    "y.append(\"orange\")\n",
+    "x = tuple(y)\n",
+    "print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "apple\nbanana\ncherry\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = (\"apple\",\"banana\",\"cherry\")\n",
+    "for xi in x:\n",
+    "    pprint(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "2\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleTupleInt = (\"apple\",\"banana\",\"cherry\",\"apple\")\n",
+    "z = sampleTupleInt.count(\"apple\")\n",
+    "print(z)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "2\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleTupleInt = (\"banana\",\"cherry\",\"apple\")\n",
+    "z = sampleTupleInt.index(\"apple\")\n",
+    "print(z)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "{'cherry', 'apple', 'banana'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "#python sets\n",
+    "#Sets are used to store multiple values in a single variable\n",
+    "#Unorded,Unindexed\n",
+    "#Duplicates Not Allowed\n",
+    "\n",
+    "sampleSet = {\"apple\",\"banana\",\"cherry\"}\n",
+    "print(sampleSet)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "cherry\napple\nbanana\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleSet = {\"apple\",\"banana\",\"cherry\"}\n",
+    "for x in sampleSet:\n",
+    "    print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleSet = {\"apple\",\"banana\",\"cherry\"}\n",
+    "print(\"banana\" in sampleSet)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "{'cherry', 'orange', 'apple', 'banana'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleSet = {\"apple\",\"banana\",\"cherry\"}\n",
+    "sampleSet.add(\"orange\")\n",
+    "print(sampleSet)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "{'cherry', 'apple', 'banana'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleSet = {\"apple\",\"banana\",\"cherry\",\"orange\"}\n",
+    "sampleSet.remove(\"orange\")\n",
+    "print(sampleSet)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "set()\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleSet = {\"apple\",\"banana\",\"cherry\",\"orange\"}\n",
+    "sampleSet.clear()\n",
+    "print(sampleSet)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "{'c', 'f', 'b', 'e', 'd', 'a'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "set1 = {\"a\",\"b\",\"c\"}\n",
+    "set2 = {\"d\",\"e\",\"f\",\"a\"}\n",
+    "set3 = set1.union(set2)\n",
+    "print(set3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "{'b', 'a'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "set1 = {\"a\",\"b\",\"c\"}\n",
+    "set2 = {\"d\",\"e\",\"f\",\"a\",\"b\"}\n",
+    "set3 = set1.intersection(set2)\n",
+    "print(set3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "[12, 59, 85, 632, 74, 52, 52, 41, 52]\n"
+     ]
+    }
+   ],
+   "source": [
+    "L = [int(x) for x in input().split()]\n",
+    "print(L)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "['12', '25', '25', '48', '69']\n"
+     ]
+    }
+   ],
+   "source": [
+    "SampleEmptyList = []\n",
+    "for x in range(5):\n",
+    "    y = input()\n",
+    "    SampleEmptyList.append(y)\n",
+    "\n",
+    "print(SampleEmptyList)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "['welcome', 'to', 'ict']\n"
+     ]
+    }
+   ],
+   "source": [
+    "txt = \"welcome,to,ict\"\n",
+    "x = txt.split(\",\")\n",
+    "print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Python dictionary\n",
+    "# Key:value pairs\n",
+    "# ordered,changeable,does not allow duplicates\n",
+    "\n",
+    "sampleDictionary = {\n",
+    "    \"brand\":\"Ford\",\n",
+    "    \"model\":\"Mustang\",\n",
+    "    \"year\":1964\n",
+    "}\n",
+    "print(sampleDictionary)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "Ford\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleDictionary = {\n",
+    "    \"brand\":\"Ford\",\n",
+    "    \"model\":\"Mustang\",\n",
+    "    \"year\":1964\n",
+    "}\n",
+    "print(sampleDictionary[\"brand\"])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "dict_keys(['brand', 'model', 'year'])\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleDictionary = {\n",
+    "    \"brand\":\"Ford\",\n",
+    "    \"model\":\"Mustang\",\n",
+    "    \"year\":1964\n",
+    "}\n",
+    "x = sampleDictionary.keys()\n",
+    "print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "{'brand': 'Ford', 'model': 'Mustang', 'year': 2018}\n{'brand': 'Ford', 'model': 'Mustang', 'year': 2020}\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleDictionary = {\n",
+    "    \"brand\":\"Ford\",\n",
+    "    \"model\":\"Mustang\",\n",
+    "    \"year\":1964\n",
+    "}\n",
+    "sampleDictionary[\"year\"] = 2018\n",
+    "print(sampleDictionary)\n",
+    "sampleDictionary.update({\"year\":2020})\n",
+    "print(sampleDictionary)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 71,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "{'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "sampleDictionary = {\n",
+    "    \"brand\":\"Ford\",\n",
+    "    \"model\":\"Mustang\",\n",
+    "    \"year\":1964\n",
+    "}\n",
+    "sampleDictionary[\"color\"] = \"red\"\n",
+    "print(sampleDictionary)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ]
+}
